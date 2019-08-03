@@ -21,3 +21,9 @@ Sources:
 [TypeSelector, ColumnSelector](https://ramhiser.com/post/2018-04-16-building-scikit-learn-pipeline-with-pandas-dataframe/)
 
 [correlation](https://github.com/Erlemar/Erlemar.github.io/blob/master/Notebooks/House_Prices.ipynb)
+
+----------
+Name:
+----------
+
+This project was started in the month of [Thermidor](https://en.wikipedia.org/wiki/Thermidor), year CCXXVII.
