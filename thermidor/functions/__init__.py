@@ -6,5 +6,5 @@ These functions extend the functionality of Python data science tools.
 '''
 
 # Import objects - flat is better than nested
-from helpers  import get_categories
-from helpers import correlation
+from functions.helpers  import get_categories
+from functions.helpers import correlation
