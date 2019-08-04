@@ -4,10 +4,10 @@
 import pandas as pd
 import numpy as np
 
-from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.base import BaseEstimator, SelectorMixin
 
 
-class ColumnSelector(BaseEstimator, TransformerMixin):
+class ColumnSelector(BaseEstimator, SelectorMixin):
     def __init__(self, columns):
         self.columns = columns
 
@@ -15,7 +15,7 @@ class ColumnSelector(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X):
-        assert isinstance(X, pd.DataFrame)
+        assert isinstance(X, pd.DataFrame), 'X is not a DataFrame.'
 
         try:
             return X[self.columns]
