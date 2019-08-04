@@ -6,6 +6,6 @@ These classes extend the functionality of Python data science tools.
 '''
 
 # Import objects - flat is better than nested
-from classes.column_selector import ColumnSelector
-from classes.type_selector import TypeSelector
-from classes.data_framer import DataFramer
+from column_selector import ColumnSelector
+from type_selector import TypeSelector
+from data_framer import DataFramer
