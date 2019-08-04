@@ -4,10 +4,10 @@
 import pandas as pd
 import numpy as np
 
-from sklearn.base import BaseEstimator, SelectorMixin
+from sklearn.base import BaseEstimator, TransformerMixin
 
 
-class TypeSelector(BaseEstimator, SelectorMixin):
+class TypeSelector(BaseEstimator, TransformerMixin):
     def __init__(self, dtype):
         self.dtype = dtype
 

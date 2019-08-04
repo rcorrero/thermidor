@@ -4,10 +4,10 @@
 import pandas as pd
 import numpy as np
 
-from sklearn.base import BaseEstimator, SelectorMixin
+from sklearn.base import BaseEstimator, TransformerMixin
 
 
-class ColumnSelector(BaseEstimator, SelectorMixin):
+class ColumnSelector(BaseEstimator, TransformerMixin):
     def __init__(self, columns):
         self.columns = columns
 
