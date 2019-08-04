@@ -5,6 +5,6 @@ thermidor is a Python module that streamlines the machine learning model develop
 '''
 
 # Import objects - flat is better than nested
-from thermidor.classes.column_selector import ColumnSelector
-from thermidor.classes.type_selector import TypeSelector
-from thermidor.functions.helpers import get_categories, correlation
+from thermidor.classes import ColumnSelector
+from thermidor.classes import TypeSelector
+from thermidor.functions import get_categories, correlation
