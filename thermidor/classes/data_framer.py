@@ -19,11 +19,10 @@ class DataFramer(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X):
-        assert isinstance(X, np.array), 'X is not a numpy array.'
-
+        
         X = pd.DataFrame(X)
         
         # Apply column names
         X.columns = self.columns
         
-        return pd.DataFrame(X)
+        return X
