@@ -12,17 +12,18 @@ class DataFramer(BaseEstimator, TransformerMixin):
                      to be applied to dataframe
     Returns: X     - A pandas dataframe
     '''
-    def __init__(self, columns):
+    def __init__(self, columns=None):
         self.columns = columns
 
     def fit(self, X, y=None):
         return self
 
     def transform(self, X):
-        
+
         X = pd.DataFrame(X)
         
         # Apply column names
-        X.columns = self.columns
+        if self.columns is not None:
+            X.columns = self.columns
         
         return X
