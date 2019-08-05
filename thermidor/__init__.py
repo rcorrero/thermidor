@@ -10,4 +10,6 @@ classes for use in data analysis and processing.
 from thermidor.classes.column_selector import ColumnSelector
 from thermidor.classes.type_selector import TypeSelector
 from thermidor.classes.data_framer import DataFramer
+from thermidor.classes.dummy_estimator import DummyEstimator
+
 from thermidor.functions.helpers import get_categories, correlation
