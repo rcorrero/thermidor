@@ -11,7 +11,7 @@ class DummyEstimator(BaseEstimator):
                         be fit
     '''
 
-    def __init__(self,  estimator):
+    def __init__(self,  estimator=None):
         self.estimator = estimator
 
     def fit(self, X, y=None, **kwargs):
