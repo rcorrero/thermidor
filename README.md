@@ -9,11 +9,20 @@ Project Organization
     ├── LICENSE
     ├── README.md 
     ├── setup.py
-    ├── thermidor 
-    │   ├── __init__.py
-    │   │
-    │   ├── classes
-    │   ├──functions
+    └── thermidor 
+			   │  
+         ├── __init__.py
+         │ 
+         ├── classes
+         │    ├── __init__.py
+	       │    ├── column_selector.py
+	       │    ├── data_framer.py
+	       │    ├── dummy_estimator.py
+	       │    └──  type_selector.py
+         │   
+         └── functions
+              ├── __init__.py
+              └── helpers.py
     
 -------------
 Sources:
