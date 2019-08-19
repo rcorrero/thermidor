@@ -1,5 +1,6 @@
 # Author: Richard Correro
 
+import warnings
 from sklearn.base import BaseEstimator
 
 
@@ -13,6 +14,11 @@ class DummyEstimator(BaseEstimator):
 
     def __init__(self,  estimator=None):
         self.estimator = estimator
+
+        warnings.warn(
+            'DummyEstimator is deprecated, use EstimatorSocket instead.',
+            DeprecationWarning
+            )
 
     def fit(self, X, y=None, **kwargs):
         self.estimator.fit(X, y)
