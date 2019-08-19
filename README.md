@@ -14,12 +14,16 @@ Project Organization
     ├── __init__.py
     ├── classes
     │   ├── __init__.py
+    │   ├── clusterer_socket.py
     │   ├── column_selector.py
     │   ├── data_framer.py
     │   ├── dummy_estimator.py
+    │   ├── estimator_socket.py
+    │   ├── transformer_socket.py
     │   └── type_selector.py
     └── functions
         ├── __init__.py
+        ├── date_extractor.py
         └── helpers.py
 
 ```    
