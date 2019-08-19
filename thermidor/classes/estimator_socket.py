@@ -32,6 +32,6 @@ class EstimatorSocket(BaseEstimator):
             Returns self.
         '''
 
-        self.estimator.fit(X,y)
+        self.estimator.fit(X, y, **kwargs)
         
         return self
