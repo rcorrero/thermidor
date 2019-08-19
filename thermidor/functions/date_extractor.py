@@ -1,4 +1,7 @@
 # Author: Richard Correro
+
+import pandas as pd
+
 def date_extractor(X, date_col='index',
                    start_date=None, end_date=None,
                    drop_nonfloat_cols=True,
@@ -70,6 +73,10 @@ def date_extractor(X, date_col='index',
         
     
     if drop_nonfloat_cols:
+       
+        # Convert string columns to float, if possible
+        X_new = X_new.apply(pd.to_numeric, errors='ignore')
+        
         # Drop columns containing non-float entries
         X_new.drop([i for i in X_new.columns.values.tolist() 
                 if X_new.dtypes[i] != 'float64'], axis=1, inplace=True)
