@@ -31,3 +31,24 @@ class ClustererSocket(TransformerSocket, ClusterMixin):
         '''
 
         return self.estimator.fit_predict(X, y)
+
+    def score(self, X, y=None, sample_weight=None):
+        '''Returns estimator's score method, if applicable.
+
+        Parameters
+        ----------
+        X : {array-like, sparse matrix}, shape = [n_samples, n_features]
+            New data.
+        y : Ignored
+            not used, present here for API consistency by convention.
+        sample_weight : array-like, shape (n_samples,), optional
+            The weights for each observation in X. If None, all observations
+            are assigned equal weight (default: None)
+
+        Returns
+        -------
+        score : float
+            Opposite of the value of X on the K-means objective.
+        '''
+
+        return self.estimator.score(X, y, sample_weight)
