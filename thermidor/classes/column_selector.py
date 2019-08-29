@@ -8,6 +8,12 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 
 class ColumnSelector(BaseEstimator, TransformerMixin):
+    '''Class which allows for treating column selection as model parameter.
+    
+    Useful in situations in which separate columns in array contain data
+    on which different transformations have been applied.
+    '''
+    
     def __init__(self, columns):
         self.columns = columns
 
@@ -15,6 +21,16 @@ class ColumnSelector(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X):
+        '''Selects and returns column specified in __init___
+        
+        Parameters:
+        -----------
+        X : array-like
+
+        Returns
+        -------
+        Pandas series or list
+        '''
         assert isinstance(X, pd.DataFrame), 'X is not a DataFrame.'
 
         try:

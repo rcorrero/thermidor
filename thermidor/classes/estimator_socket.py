@@ -4,7 +4,7 @@ from sklearn.base import BaseEstimator
 
 
 class EstimatorSocket(BaseEstimator):
-    '''A class which allows for treating estimator as
+    '''Class which allows for treating estimator as
     model parameters.
 
     Parameters

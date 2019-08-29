@@ -5,7 +5,7 @@ from sklearn.base import ClusterMixin
 from .transformer_socket import TransformerSocket
 
 class ClustererSocket(TransformerSocket, ClusterMixin):
-    '''A class which allows for treating clusterers as
+    '''Class which allows for treating clusterers as
     model parameters.
 
     Parameters

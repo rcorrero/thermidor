@@ -6,15 +6,17 @@ import scipy.stats as stats
 
 # Derive cats from full dataset
 def get_categories(df, cols):
-    '''
+    '''Returns all categories from a given column in
+       a Pandas dataframe.
+
     Parameters
-    
+    ----------   
     df : Pandas dataframe
     
     cols : Columns to derive categories from
     
     Returns
-    
+    ------- 
     cats : Dictionary mapping col name to categories
     '''
     
@@ -32,10 +34,20 @@ def get_categories(df, cols):
 # https://github.com/Erlemar/Erlemar.github.io/blob/master/Notebooks/House_Prices.ipynb
 
 def correlation(data, threshold = -1):
-    '''Input: data - A pandas dataframe.
-       threshold - absolute min correlation.
-       Returns: a list of tuples.'''
-    factors_paired = [(i,j) for i in data.columns for j in data.columns[data.columns.get_loc(i)+1:]]
+    '''
+    Parameters
+    ----------
+    data : array-like
+
+    threshold : float or int, optional default=1
+        Absolute min correlation
+
+    Returns
+    -------
+    list of tuples
+    '''
+    factors_paired = [(i,j) for i in data.columns for j in
+                      data.columns[data.columns.get_loc(i)+1:]]
 
     corr_list = []
     

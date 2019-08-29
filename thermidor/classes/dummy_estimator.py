@@ -5,14 +5,19 @@ from sklearn.base import BaseEstimator
 
 
 class DummyEstimator(BaseEstimator):
-    '''
-    Allows for optimization over different estimators.
+    '''Class that allows for optimization
+       over different estimators. 
 
-    Input: estimator - a sklearn estimator to
-                        be fit
+    This class is deprecated. Use `EstimatorSocket`
+    instead.
     '''
 
     def __init__(self,  estimator=None):
+        '''
+        Parameters
+        ----------
+        estimator : estimator object
+        '''
         self.estimator = estimator
 
         warnings.warn(

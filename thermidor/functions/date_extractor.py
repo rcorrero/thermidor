@@ -53,7 +53,7 @@ def date_extractor(X, date_col='index',
         # end_date is specified
         
         mask = (X[date_col] < end_date)
-        
+    
     elif end_date == None:
         # start_date is specified
         

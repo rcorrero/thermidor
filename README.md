@@ -3,6 +3,9 @@ thermidor &mdash; Richard Correro
 
 thermidor is a Python module that streamlines the machine learning model development process. thermidor contains several utility functions and classes for use in data analysis and processing.
 
+thermidor provides a framework for generalizing and extending machine learning models built in Sci-kit Learn. thermidor includes estimator, transformer and clusterer sockets which allow for treating steps in a Sci-kit Learn pipeline as parameters. These parameters may be passed to `RandomizedSearchCV` or `GridSearchCV` for use in cross-
+validation.
+
 Project Organization
 ------------
 ```
