@@ -38,6 +38,8 @@ def date_extractor(X, date_col='index',
     pandas dataframe
         Selected rows from `X`.
     '''
+    pd.options.mode.chained_assignment = None  # default='warn'
+    
     if date_col == 'index':
         # Convert index to col for use in masks
         X['index'] = X.index
