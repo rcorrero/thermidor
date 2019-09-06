@@ -1,4 +1,4 @@
-import Pandas as pd
+import pandas as pd
 
 from sklearn.model_selection import GridSearchCV
 from .estimator_socket import EstimatorSocket
