@@ -45,3 +45,5 @@ Name:
 ----------
 
 This project was started in the month of [Thermidor](https://en.wikipedia.org/wiki/Thermidor), year CCXXVII.
+------------
+Created by Richard Correro in 2019. Contact me at rcorrero at stanford dot edu
