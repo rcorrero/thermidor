@@ -19,6 +19,7 @@ from .classes import TypeSelector
 from .classes import DataFramer
 from .classes import DummyEstimator
 from .classes import EstimatorSocket
+from .classes import EstimatorSocketCV
 from .classes import TransformerSocket
 from .classes import ClustererSocket
 

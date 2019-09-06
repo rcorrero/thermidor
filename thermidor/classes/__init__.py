@@ -11,5 +11,6 @@ from .type_selector import TypeSelector
 from .data_framer import DataFramer
 from .dummy_estimator import DummyEstimator
 from .estimator_socket import EstimatorSocket
+from .estimator_socket_cv import EstimatorSocketCV
 from .transformer_socket import TransformerSocket
 from .clusterer_socket import ClustererSocket
