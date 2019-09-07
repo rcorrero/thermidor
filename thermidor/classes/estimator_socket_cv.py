@@ -50,9 +50,18 @@ class EstimatorSocketCV(EstimatorSocket):
         ``-1`` means using all processors. See :term:`Glossary <n_jobs>`
         for more details.
         
-    random_state : int, RandomState instance or None, optional, default=None
+    cv_random_state : int, RandomState instance or None, optional, default=None
         Pseudo random number generator state used for random uniform sampling
         from lists of possible values instead of scipy.stats distributions.
+        This values is passed to `cross_val`.
+        If int, random_state is the seed used by the random number generator;
+        If RandomState instance, random_state is the random number generator;
+        If None, the random number generator is the RandomState instance used
+        by `np.random`.
+
+    estimator_random_state : int, RandomState instance or None, optional, 
+                             default=None
+        This value is passed to `estimator`.
         If int, random_state is the seed used by the random number generator;
         If RandomState instance, random_state is the random number generator;
         If None, the random number generator is the RandomState instance used
@@ -63,7 +72,8 @@ class EstimatorSocketCV(EstimatorSocket):
     '''
     def __init__(self, estimator=None, param_name=None, dist_func=None, 
                  cross_val=GridSearchCV, cv=3, n_jobs=None, 
-                 random_state=None, verbose=False):    
+                 cv_random_state=None, estimator_random_state=None,
+                 verbose=False):    
         self.estimator = estimator
         self.param_name = param_name
         self.dist_func = dist_func
@@ -71,7 +81,8 @@ class EstimatorSocketCV(EstimatorSocket):
         
         self.cv = cv
         self.n_jobs=n_jobs
-        self.random_state = random_state
+        self.cv_random_state = cv_random_state
+        self.estimator_random_state = estimator_random_state
         self.verbose = verbose
 
     def fit(self, X, y=None, **kwargs):
@@ -86,10 +97,10 @@ class EstimatorSocketCV(EstimatorSocket):
             self.param_name : self.dist_func(X)
         }
         
-        self.model_selector = self.cross_val(self.estimator, self.dist,
-                                             cv=self.cv, n_jobs=self.n_jobs,
-                                             random_state=self.random_state,
-                                             verbose=self.verbose)
+        self.model_selector = self.cross_val(
+            self.estimator(random_state=self.estimator_random_state),
+            self.dist, cv=self.cv, n_jobs=self.n_jobs,
+            random_state=self.cv_random_state, verbose=self.verbose)
         
         self.model_selector.fit(X, y, **kwargs)
         
