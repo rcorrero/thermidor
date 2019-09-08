@@ -18,7 +18,7 @@ class EstimatorSocketCV(EstimatorSocket):
     
     Parameters
     -----------
-    estimator : Sci-kit Learn estimator object
+    estimator : Sci-kit Learn estimator class
         Estimator to be fit using cross-validation.
         
     param_name: str

@@ -10,7 +10,7 @@ class ClustererSocket(TransformerSocket, ClusterMixin):
 
     Parameters
     ----------
-    estimator : object, default=None
+    estimator : Sci-kit learn estimator object
         If estimator is None or 'passthrough' then transform returns X.
     '''
     def predict(self, X, sample_weight=None):

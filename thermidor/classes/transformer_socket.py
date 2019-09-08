@@ -9,7 +9,7 @@ class TransformerSocket(EstimatorSocket, TransformerMixin):
 
     Parameters
     ----------
-    estimator : object, default=None
+     estimator : Sci-kit learn estimator object
         If transformer is None or 'passthrough' then transform returns X.
     '''
 

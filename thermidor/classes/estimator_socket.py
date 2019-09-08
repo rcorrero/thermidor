@@ -9,7 +9,7 @@ class EstimatorSocket(BaseEstimator):
 
     Parameters
     ----------
-    estimator : object, default=None
+    estimator : Sci-kit learn estimator object
     '''
     
     def __init__(self, estimator=None):
